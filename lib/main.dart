@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prospectos/src/pages/detalles_page.dart';
 import 'package:prospectos/src/pages/formulario_page.dart';
 import 'package:prospectos/src/pages/home_page.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
         initialRoute: 'home',
         routes: <String, WidgetBuilder> {
           'home': (BuildContext context) => HomePage(),
-          'AltaProspecto':(BuildContext context) => FormularioAlta()
+          'AltaProspecto':(BuildContext context) => FormularioAlta(),
+          'DetallesProspecto': (BuildContext context) => DetallesProspecto()
         },
       ),
     );
