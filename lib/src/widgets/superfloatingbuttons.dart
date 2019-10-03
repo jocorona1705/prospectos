@@ -12,7 +12,7 @@ class SuperFloatingAction extends StatelessWidget {
           child: Icon(Icons.add),
           backgroundColor: Colors.blue,
           onPressed: () {
-            Navigator.of(context).pushNamed('Contador');
+            Navigator.of(context).pushNamed('ContadorProvider');
           },
         ),
       ],

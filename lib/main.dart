@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:prospectos/src/pages/contador_provider.dart';
 import 'package:prospectos/src/pages/detalles_page.dart';
 import 'package:prospectos/src/pages/formulario_page.dart';
 import 'package:prospectos/src/pages/home_page.dart';
+import 'package:prospectos/src/providers/contador_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:prospectos/src/providers/prospectos_info.dart';
 import 'src/pages/contador.dart';
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(builder: (context) => ProspectosInfo(),)
+        ChangeNotifierProvider(builder: (context) => ProspectosInfo()),
+        ChangeNotifierProvider(builder: (context) => ContadorInfo(),)
       ],
       child: MaterialApp(
         title: 'Prospectos',
@@ -22,7 +25,8 @@ class MyApp extends StatelessWidget {
           'home': (BuildContext context) => HomePage(),
           'AltaProspecto':(BuildContext context) => FormularioAlta(),
           'DetallesProspecto': (BuildContext context) => DetallesProspecto(),
-          'Contador': (BuildContext context) => Contador()
+          'Contador': (BuildContext context) => Contador(),
+          'ContadorProvider': (BuildContext context) => ContadorProvider()
         },
       ),
     );
