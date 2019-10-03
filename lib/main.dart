@@ -4,6 +4,7 @@ import 'package:prospectos/src/pages/formulario_page.dart';
 import 'package:prospectos/src/pages/home_page.dart';
 import 'package:provider/provider.dart';
 import 'package:prospectos/src/providers/prospectos_info.dart';
+import 'src/pages/contador.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         routes: <String, WidgetBuilder> {
           'home': (BuildContext context) => HomePage(),
           'AltaProspecto':(BuildContext context) => FormularioAlta(),
-          'DetallesProspecto': (BuildContext context) => DetallesProspecto()
+          'DetallesProspecto': (BuildContext context) => DetallesProspecto(),
+          'Contador': (BuildContext context) => Contador()
         },
       ),
     );

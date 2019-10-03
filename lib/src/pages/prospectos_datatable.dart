@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/material/data_table.dart';
 // import 'package:provider/provider.dart';
 // import 'package:prospectos/src/providers/prospectos_info.dart';
 
 class DataTableOfProspectos extends StatelessWidget {
-
   void _getSelectedRowInfo() {
     print('Selected Item Row Name Here...');
   }
@@ -17,6 +15,7 @@ class DataTableOfProspectos extends StatelessWidget {
       ),
       body: Container(
         child: DataTable(
+          horizontalMargin: 100.0,
           onSelectAll: (b) {},
           sortAscending: true,
           columns: <DataColumn>[
@@ -30,20 +29,20 @@ class DataTableOfProspectos extends StatelessWidget {
           rows: items
               .map(
                 (itemRow) => DataRow(
-                      cells: [
-                        DataCell(
-                          Text(itemRow.itemName),
-                          showEditIcon: false,
-                          placeholder: false,
-                        ),
-                        DataCell(
-                          Text(itemRow.itemPrice),
-                          showEditIcon: true,
-                          placeholder: false,
-                          onTap: _getSelectedRowInfo,
-                        ),
-                      ],
+                  cells: [
+                    DataCell(
+                      Text(itemRow.itemName),
+                      showEditIcon: false,
+                      placeholder: false,
                     ),
+                    DataCell(
+                      Text(itemRow.itemPrice),
+                      showEditIcon: true,
+                      placeholder: false,
+                      onTap: _getSelectedRowInfo,
+                    ),
+                  ],
+                ),
               )
               .toList(),
         ),
